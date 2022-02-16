@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'layout/home_layout.dart';
 
 void main() {
@@ -10,9 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeLayout(),
+    return ScreenUtilInit(
+      designSize: const Size(400, 650),
+      builder: () => const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeLayout(),
+      ),
     );
   }
 }

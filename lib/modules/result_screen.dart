@@ -72,7 +72,8 @@ class _ResultScreenState extends State<ResultScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => RecapAnswer(widget.ans),
+                      builder: (context) =>
+                          RecapAnswer(widget.score, widget.ans),
                     ),
                   );
                 },
